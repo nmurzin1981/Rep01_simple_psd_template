@@ -1,0 +1,62 @@
+﻿
+body{
+    margin: 0px; /* У элемента body по умолчанию были внешние отступы */
+    font-family: Arial, sans-serif;  /* Шрифт Arial или какой-либо другой без засечек */
+}
+
+.body_container{
+    max-width: 1200px; /* Если окно меньше, то float блоки перестраиваются друг под друга */
+    margin: 0px auto;  /* Центрирование по горизонтали */
+    min-height: 323px; /* Если текст не уместится, то высота блока увеличится */
+}
+
+.header{
+    background-color: #445162;
+    color: white; /* Цвет текста */
+    padding-bottom: 50px; /* внутренний отступ снизу */
+
+   /* position: relative; */ /* Чтобы дочерние элементы размещать свойством position: absolute; */
+   /* top: 0px; */   /* Отступ от верхней границы родителя */
+   /* left: 0px; */  /* Отступ от левой границы рдителя */
+ }
+
+/* Так как всем дочерним элементам блока .header задано свойство float, то высота блок .header нулевая(его не видно) */
+/* Данный псевдокласс здесь для токго, чтобы высота блока .header догоняла дочерние float блоки */
+.header:after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.header-text{
+    background-color: coral;
+
+    /* position: absolute; */ 
+    /* top: 50px;  */ /* Отступ от верхней границы родителя */
+    /* left: 50px; */ /* Отступ от левой границы рдителя */
+
+    float: left;
+    margin-top: 50px;   /* Внешний отступ сверху */
+    margin-left: 50px;  /* Внешний отступ слева */
+
+    max-width: 45%; /* Ширина контента 50% от ширины родителя, если текст длинее, то он переносятся на строку ниже */
+}
+
+.header-img_product{
+    /* display: inline-block;  */
+    /* Для inline-block элемента можно задавать ширину и высоту контента */
+    /* Свойство float отменяет свойство display */
+    width: 469px;  /* Ширина контента */
+    height: 214px; /* Высота контента */
+    background-color: white;
+    border: 1px solid darkred;
+
+    /* position: absolute; */
+    /* top: 50px;   */ /* Отступ от верхней границы родителя */
+    /* right: 50px; */ /* Отступ от правой границы рдителя */
+
+    float: right;       /* Свойство float отменяет свойство display */
+    margin-top: 50px;   /* Внешний отступ сверху */
+    margin-right: 50px; /* Внешний отступ справа */
+}
