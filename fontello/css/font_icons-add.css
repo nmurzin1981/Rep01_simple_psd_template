@@ -1,0 +1,14 @@
+﻿
+/* Этот файл составлен руками на основе файла font_icons.css, который был автоматом сгенерирован сервисом fontello */
+
+@font-face {
+    font-family: 'font_icons';
+    src: url('../font/font_icons.woff?28622244') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.font_icons{
+    font-family: "font_icons";
+  }
+  

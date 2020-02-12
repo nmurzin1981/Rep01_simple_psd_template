@@ -30,7 +30,7 @@ body{
 }
 
 .header-text{
-    background-color: coral;
+    /* background-color: coral; */
 
     /* position: absolute; */ 
     /* top: 50px;  */ /* Отступ от верхней границы родителя */
@@ -59,4 +59,23 @@ body{
     float: right;       /* Свойство float отменяет свойство display */
     margin-top: 50px;   /* Внешний отступ сверху */
     margin-right: 50px; /* Внешний отступ справа */
+    margin-left: 20px;  /* Внешний отступ слева */
 }
+
+.header-text-h{
+    font-size: 60px;      /* Рзмер шрифта */
+    font-weight: 400;     /* Насыщенность(жирность) от 100 до 900 */
+    margin-bottom: 1rem;  /* Внешний отступ снизу */
+}
+
+.header-text-ul{
+    list-style-type: none; /* Убрать маркеры */
+    margin: 0px;  /* По у молчанию было 16px сверху */
+    padding: 0px; /* По умолчанию было 40px слева */
+
+    font-size: 20px;  /* Рзмер шрифта */
+    font-weight: 400; /* Насыщенность(жирность) от 100 до 900 */
+    line-height: 36px; 
+}
+
+
