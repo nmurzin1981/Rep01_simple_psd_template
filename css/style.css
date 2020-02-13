@@ -14,10 +14,6 @@ body{
     background-color: #445162;
     color: white; /* Цвет текста */
     padding-bottom: 50px; /* внутренний отступ снизу */
-
-   /* position: relative; */ /* Чтобы дочерние элементы размещать свойством position: absolute; */
-   /* top: 0px; */   /* Отступ от верхней границы родителя */
-   /* left: 0px; */  /* Отступ от левой границы рдителя */
  }
 
 /* Так как всем дочерним элементам блока .header задано свойство float, то высота блок .header нулевая(его не видно) */
@@ -31,11 +27,6 @@ body{
 
 .header-text{
     /* background-color: coral; */
-
-    /* position: absolute; */ 
-    /* top: 50px;  */ /* Отступ от верхней границы родителя */
-    /* left: 50px; */ /* Отступ от левой границы рдителя */
-
     float: left;
     margin-top: 50px;   /* Внешний отступ сверху */
     margin-left: 50px;  /* Внешний отступ слева */
@@ -51,10 +42,6 @@ body{
     height: 214px; /* Высота контента */
     background-color: white;
     border: 1px solid darkred;
-
-    /* position: absolute; */
-    /* top: 50px;   */ /* Отступ от верхней границы родителя */
-    /* right: 50px; */ /* Отступ от правой границы рдителя */
 
     float: right;       /* Свойство float отменяет свойство display */
     margin-top: 50px;   /* Внешний отступ сверху */
@@ -76,6 +63,31 @@ body{
     font-size: 20px;  /* Рзмер шрифта */
     font-weight: 400; /* Насыщенность(жирность) от 100 до 900 */
     line-height: 36px; 
+}
+
+.header-text-li-png{
+    margin-left: 30px;
+    position: relative;
+}
+.header-text-li-png:before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    position: absolute;
+    top: 7px;
+    left: -30px;
+    background-image: url("../img/check_mark_16x16.png");
+
+    /* Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.*/
+    -webkit-background-size: contain; /* Safari до версии 4.1 и Chrome до версии 3.0 */
+    -o-background-size: contain;      /* Opera до версии 10.53 */
+    -moz-background-size: contain;    /* Firefox до версии 4.0 */
+    background-size: contain;
+    
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
