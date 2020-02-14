@@ -4,49 +4,40 @@ body{
     font-family: Arial, sans-serif;  /* Шрифт Arial или какой-либо другой без засечек */
 }
 
-.body_container{
+.body-container{
     max-width: 1200px; /* Если окно меньше, то float блоки перестраиваются друг под друга */
     margin: 0px auto;  /* Центрирование по горизонтали */
-    min-height: 323px; /* Если текст не уместится, то высота блока увеличится */
 }
 
 .header{
     background-color: #445162;
-    color: white; /* Цвет текста */
-    padding-bottom: 50px; /* внутренний отступ снизу */
+    color: white;  /* Цвет текста */
+    padding: 50px;   /* внутренний отступ */
+    box-sizing: border-box;  /*width(height) = content+padding+border */
  }
 
 /* Так как всем дочерним элементам блока .header задано свойство float, то высота блок .header нулевая(его не видно) */
 /* Данный псевдокласс здесь для токго, чтобы высота блока .header догоняла дочерние float блоки */
 .header:after{
     content: "";
-    display: block;
-    width: 100%;
-    clear: both;
+    display: block; /* Отображать как блочный элемент */
+    width: 100%;    /* Шрина 100% от ширины родиеля. Родителем является .header */
+    clear: both;    /* Отмена обтекания float элементов */
 }
 
 .header-text{
-    /* background-color: coral; */
-    float: left;
-    margin-top: 50px;   /* Внешний отступ сверху */
-    margin-left: 50px;  /* Внешний отступ слева */
-
+    float: left;    /* Свойство float переопределяет свойство display */
     max-width: 45%; /* Ширина контента 50% от ширины родителя, если текст длинее, то он переносятся на строку ниже */
+    margin: 0;      /* Внешние отступы */
 }
 
-.header-img_product{
-    /* display: inline-block;  */
-    /* Для inline-block элемента можно задавать ширину и высоту контента */
-    /* Свойство float отменяет свойство display */
+.header-img-product{
+    float: right;  /* Свойство float переопределяет свойство display */
     width: 469px;  /* Ширина контента */
     height: 214px; /* Высота контента */
     background-color: white;
     border: 1px solid darkred;
-
-    float: right;       /* Свойство float отменяет свойство display */
-    margin-top: 50px;   /* Внешний отступ сверху */
-    margin-right: 50px; /* Внешний отступ справа */
-    margin-left: 20px;  /* Внешний отступ слева */
+    margin: 0;      /* Внешние отступы */
 }
 
 .header-text-h{
@@ -59,25 +50,23 @@ body{
     list-style-type: none; /* Убрать маркеры */
     margin: 0px;  /* По у молчанию было 16px сверху */
     padding: 0px; /* По умолчанию было 40px слева */
-
-    font-size: 20px;  /* Рзмер шрифта */
-    font-weight: 400; /* Насыщенность(жирность) от 100 до 900 */
-    line-height: 36px; 
+    font-size: 20px;   /* Рзмер шрифта */
+    font-weight: 400;  /* Насыщенность(жирность) от 100 до 900 */
+    line-height: 36px; /* Высота строки, не путать с высотой шрифта */
 }
 
-.header-text-li-png{
-    margin-left: 30px;
-    position: relative;
+.header-text-li-png{    /* Элемент li с картинкой png в роли маркера */
+    margin-left: 30px;  /* Внешний отступ слева */
+    position: relative; /* Дочерний элемент будет позиционирован свойством position: absolute; */
 }
-.header-text-li-png:before{
+.header-text-li-png:before{ /* Родителем для класса :before является элемент li */
     content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid black;
-    position: absolute;
-    top: 7px;
-    left: -30px;
+    display: block;     /* Отображать элемент как блочный */
+    width: 20px;        /* Ширина контента */
+    height: 20px;       /* Высота контента */
+    position: absolute; /* Позиционирование относитеьно элемента li */
+    top: 7px;           /* Отступ сверху */
+    left: -30px;        /* Отступ слева, картинка выезжает в поле margin */
     background-image: url("../img/check_mark_16x16.png");
 
     /* Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.*/
@@ -86,8 +75,23 @@ body{
     -moz-background-size: contain;    /* Firefox до версии 4.0 */
     background-size: contain;
     
-    background-repeat: no-repeat;
-    background-position: center;
+    background-repeat: no-repeat; /* Отображать фоновую картинку один раз без повторов */
+    background-position: center;  /* Расположить фоновую картинку по центу */
+}
+
+.header-text-li-ico{    /* Элемент li с иконочным символом в роли маркера */
+    margin-left: 30px;  /* Внешний отступ слева */
+    position: relative; /* Дочерний элемент будет позиционирован свойством position: absolute; */
+}
+.header-text-li-ico:before{ /* Родителем для класса :before является элемент li */
+    font-family: "font_icons";
+    content: '\e800';
+    display: block;     /* Отображать элемент как блочный */
+    width: 20px;        /* Ширина контента */
+    height: 20px;       /* Высота контента */
+    position: absolute; /* Позиционирование относитеьно элемента li */
+    top: 0px;           /* Отступ сверху */
+    left: -30px;        /* Отступ слева, иконочный символ выезжает в поле margin */
 }
 
 
