@@ -18,6 +18,7 @@ body{
     color: white;  /* Цвет текста */
     padding: 50px;   /* внутренний отступ */
     box-sizing: border-box;  /*width(height) = content+padding+border */
+    width: 100%;    /* Ширина элемента 100% от ширины родителя */
  }
 
 /* Так как всем дочерним элементам блока .header задано свойство float, то высота блок .header нулевая(его не видно) */
@@ -106,19 +107,21 @@ body{
     background-color: white;
     padding: 50px;  /* внутренний отступ */
     box-sizing: border-box;  /*width(height) = content+padding+border */
+    width: 100%;    /* Ширина элемента 100% от ширины родителя */
 
     display: flex;
     flex-direction: row; /* Основная ось по горизонтали */
     justify-content: space-between; /* Элементы отображаются с одинаковыми отступами между ними. */
+    /* flex НЕ схлопывает внешние отступы margin дочерних элементов */
 }
 
 .about-text{
-    margin: 0 0 0 0;  /* Внешние отступы. flex НЕ схлопывает отступы соседей */
+    margin: 0 0 0 0;  /* Внешние отступы 12,3,6,9 */
 }
 
 .about-video{
     display: inline-block;
-    margin: 0 0 0 101px;  /* Внешние отступы. flex НЕ схлопывает отступы соседей */
+    margin: 0 0 0 101px;  /* Внешние отступы 12,3,6,9 */
     min-width: 430px;     /* Ширина контента не менее!, иначе flex может его ужать */
     height: 245px;        /* Высота контента */
     background-color: #445161;
@@ -142,12 +145,79 @@ body{
     margin-bottom: 1rem;  /* Внешний отступ снизу */
 }
 
+.about-text-p:last-child{ /* Последний абзац */
+    margin-bottom: 0;     /* Внешний отступ снизу */
+}
 
+/*====================================================================*/
+/*                                                            Dignity */
+/*====================================================================*/
 
+.dignity{
+    background-color: #f5f5f5;
+    padding: 50px;  /* внутренний отступ */
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    width: 100%;    /* Ширина элемента 100% от ширины родителя */
+}
 
+.dignity-h{
+    display: block;     /* Отображать элемент как блочный */
+    color: #445161;   /* Цвет текста */
+    font-size: 30px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    text-align: center; /* Выравнивание текста по горизонтали по центру */
+    margin: 0 0 0 0; /* Внешние отступы 12,3,6,9 */
+}
 
+/* 1200 - (50*2) = 1100.  1100/2 = 550.  550 = (50 + 500) */
+.dignity-column-a,
+.dignity-column-b{
+    display: inline-block;
+    width: 500px;          /* Ширина контента */
+    margin: 2rem 0 0 40px; /* Внешние отступы 12,3,6,9 */
+}
 
+.dignity-p{
+    margin: 0 0 1rem 0; /* Внешние отступы 12,3,6,9 */
+    color: #333333;   /* Цвет текста */
+    font-size: 16px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    line-height: 24px;  /* Высота строки, не путать с размером шрифта */
+    position: relative; /* Декоративные дочерние элементы будут размещены через position:absolute */
+}
 
+.dignity-p:last-child{ /* Последний абзац */
+    margin-bottom: 0;  /* Внешний отступ снизу */
+}
 
+/* Рисуем квадратик с плюсом */
+.dignity-p:before{  /* Родителем для псевдокласса before является абзац <p> */
+    content: "+";
+    display: block; /* Отображать элемент как блок */
+    width: 32px;    /* Ширина контента */
+    height: 32px;   /* Высота контента */
+     
+    font-size: 30px; /* Размер шрифта */
+    line-height: 35px; /* Высота строки, чтобы плюсик съехал пониже */
+    text-align: center; /* Выравнивание по горизонтали по центру */
+    font-weight: bold;  /* Насыщенность шрифта - жирный */
+    color: white;     /* Цвет текста */
+    background-color: #445161;
+
+    position: absolute; /* Позицианируем декоративный элемент относительно родителя с position:relative; */
+    top: 0px;    /* Отступ сверху */
+    left: -35px; /* Отступ слева, плюсик заезжает в поле margin */
+}
+
+/* Фоновые цвета для отладки */
+/* .dignity{
+    background-color: coral;
+}
+.dignity-column-a{
+    background-color: lightgreen;
+}
+.dignity-column-b{
+    background-color: lightblue;
+} */
 
 
