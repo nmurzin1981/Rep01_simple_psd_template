@@ -192,21 +192,25 @@ body{
 
 /* Рисуем квадратик с плюсом */
 .dignity-p:before{  /* Родителем для псевдокласса before является абзац <p> */
-    content: "+";
+    content: "";
     display: block; /* Отображать элемент как блок */
     width: 32px;    /* Ширина контента */
     height: 32px;   /* Высота контента */
-     
-    font-size: 30px; /* Размер шрифта */
-    line-height: 35px; /* Высота строки, чтобы плюсик съехал пониже */
-    text-align: center; /* Выравнивание по горизонтали по центру */
-    font-weight: bold;  /* Насыщенность шрифта - жирный */
-    color: white;     /* Цвет текста */
     background-color: #445161;
-
     position: absolute; /* Позицианируем декоративный элемент относительно родителя с position:relative; */
     top: 0px;    /* Отступ сверху */
     left: -35px; /* Отступ слева, плюсик заезжает в поле margin */
+
+    background-image: url("../img/png_white_plus_32x32.png");
+
+    /* Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.*/
+    -webkit-background-size: contain; /* Safari до версии 4.1 и Chrome до версии 3.0 */
+    -o-background-size: contain;      /* Opera до версии 10.53 */
+    -moz-background-size: contain;    /* Firefox до версии 4.0 */
+    background-size: contain;
+    
+    background-repeat: no-repeat; /* Отображать фоновую картинку один раз без повторов */
+    background-position: center;  /* Расположить фоновую картинку по центу */
 }
 
 /* Фоновые цвета для отладки */
