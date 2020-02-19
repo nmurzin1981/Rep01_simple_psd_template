@@ -419,9 +419,96 @@ body{
     background-color: navajowhite;
 } */
 
+/*====================================================================*/
+/*                                                            Reviews */
+/*====================================================================*/
 
+.reviews{
+    background-color: #f5f5f5;
+    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    width: 100%;    /* Ширина элемента 100% от ширины родителя */
 
+    display: flex;
+    flex-direction: row; /* Гланая ось по горизонтали */
+    flex-wrap: wrap; /* Разрешить перенос элементов на новую строку */
+    justify-content: space-between; /* Элементы отображаются с одинаковыми отступами между ними */
+}
 
+.reviews-title{
+    display: block;     /* Отображать элемент как блочный */
+    min-width: 100%;    /* Ширина 100% от ширины родителя (для flex)*/
 
+    color: #445161;   /* Цвет текста */
+    font-size: 30px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    text-align: center; /* Выравнивание текста по горизонтали по центру */
+    margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
+}
+
+.reviews-item{            /* Это тэг <figure> */
+    width: 49%;           /* Ширина 50% от ширины родителя */
+    margin: 0 0 40px 0px; /* Внешние отступы 12,3,6,9 */
+    display: flex; /* Это flex контэйнер в котором есть дочерние блоки -img и -txtbox */
+}
+
+.reviews-item-img{
+    display: block;      /* Отображать элемент как блочный */
+    min-width: 75px;    /* Ширина контента не менее!, иначе flex может его ужать */
+    height: 75px;       /* Высота контента */
+    background-color: #445161;
+    color: white;     /* Цвет текста атрибута alt */
+    border-radius: 50%; /* Скругление краев */
+}
+
+.reviews-item-txtbox{       /* Это тэг <figcaption> */
+    padding: 10px 10px 10px 10px; /* Внутренние отступы 12,3,6,9 */
+    background-color: #ebebeb;
+    margin-left: 20px;  /* Внешний отступ слева для треугольника */
+    border-radius: 10px;
+    position: relative; /* Будем размещать декоративный треугольник с position:absolute */
+}
+.reviews-item-txtbox:before{ /* Это декоративный треугольник */
+    content: "";
+    /* background-color: darkgreen; */
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    border: 15px solid transparent; /* Ширина рамки 20px и она не видима */
+    border-right: 15px solid #ebebeb; /* Видим только правый кусок рамки(треугольник) */
+}
+
+.reviews-item-txtbox-p{
+    margin: 0 0 0.5rem 0;   /* Внешние отступы 12,3,6,9 */
+    color: #333333;  /* Цвет текста */
+    font-size: 14px;   /* Размер шрифта */
+    font-weight: 400;  /* Насыщенность(жирность) шрифта 100-900 */
+    line-height: 18px; /* Высота строки, не путать с высотой шрифта */
+}
+
+.reviews-item-txtbox-href{
+    text-decoration: none; /* Убрать подчеркивание у ссылки */
+    color: #989898;   /* Цвет текста */
+    font-size: 14px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    line-height: 18px;  /* Высота строки, не путать с высотой шрифта */
+}
+.reviews-item-txtbox-href:hover{ /* Эффект наведения*/
+    color: darkgoldenrod; /* Цвет текста */
+}
+
+/* Фоновые цвета для отладки */
+/* .reviews{
+    background-color: coral;
+}
+.reviews-title{
+    background-color: orange;
+}
+.reviews-item{ 
+    background-color: lightgreen;
+}
+.reviews-item-txtbox{
+    background-color: navajowhite;
+} */
 
 
