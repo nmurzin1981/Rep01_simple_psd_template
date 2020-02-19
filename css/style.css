@@ -334,7 +334,7 @@ body{
 }
 
 /* Фоновые цвета для отладки */
-.dignity2{
+/* .dignity2{
     background-color: coral;
 }
 .dignity2-title{
@@ -345,7 +345,83 @@ body{
 }
 .dignity2-column-b{
     background-color: lightblue;
+} */
+
+/*====================================================================*/
+/*                                                        Screenshots */
+/*====================================================================*/
+
+.screens{
+    background-color: white;
+    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    width: 100%;    /* Ширина элемента 100% от ширины родителя */
+
+    display: flex;
+    flex-direction: row; /* Гланая ось по горизонтали */
+    flex-wrap: wrap; /* Разрешить перенос элементов на новую строку */
+    justify-content: space-between; /* Элементы отображаются с одинаковыми отступами между ними */
 }
+
+.screens-title{
+    display: block;     /* Отображать элемент как блочный */
+    min-width: 100%;    /* Ширина 100% от ширины родителя (для flex)*/
+
+    color: #445161;   /* Цвет текста */
+    font-size: 30px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    text-align: center; /* Выравнивание текста по горизонтали по центру */
+    margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
+}
+
+.screen-item{
+    width: 49%;         /* Ширина 50% от ширины родителя */
+    margin: 0 0 40px 0px; /* Внешние отступы 12,3,6,9 */
+    display: flex; /* Это flex контэйнер в котором есть дочерние блоки -img и -txtbox */
+}
+
+.screen-item-img{
+    display: block;      /* Отображать элемент как блочный */
+    margin: 0 10px 0 0px;   /* Внешние отступы 12,3,6,9 */
+    min-width: 200px;    /* Ширина контента не менее!, иначе flex может его ужать */
+    height: 150px;       /* Высота контента */
+    background-color: #445161;
+    color: white;     /* Цвет текста атрибута alt */
+}
+
+.screen-item-txtbox-title{
+    display: block;
+    color: #445161;    /* Цвет текста */
+    font-size: 24px;     /* Размер шрифта */
+    font-weight: 400;    /* Насыщенность(жирность) шрифта 100-900 */
+    margin-bottom: 1rem; /* Внешний отступ снизу */
+}
+
+.screen-item-txtbox-p{
+    margin: 0 0 0 0;   /* Внешние отступы 12,3,6,9 */
+    color: #333333;  /* Цвет текста */
+    font-size: 16px;   /* Размер шрифта */
+    font-weight: 400;  /* Насыщенность(жирность) шрифта 100-900 */
+    line-height: 24px; /* Высота строки, не путать с высотой шрифта */
+}
+
+/* Фоновые цвета для отладки */
+/* .screens{
+    background-color: coral;
+}
+.screens-title{
+    background-color: orange;
+}
+.screen-item{
+    background-color: lightgreen;
+}
+.screen-item-txtbox{
+    background-color: navajowhite;
+} */
+
+
+
+
 
 
 
