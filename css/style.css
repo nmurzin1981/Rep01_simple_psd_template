@@ -45,7 +45,7 @@ body{
     margin: 0;      /* Внешние отступы */
 }
 
-.header-text-h{
+.header-text-title{
     display: inline-block;
     font-size: 60px;      /* Рзмер шрифта */
     font-weight: 400;     /* Насыщенность(жирность) от 100 до 900 */
@@ -127,7 +127,7 @@ body{
     background-color: #445161;
 }
 
-.about-text-h{
+.about-text-title{
     display: inline-block;
     margin: 0 0 1rem 0;   /* Внешние отступы */    
     color: #445161;     /* Цвет текста */
@@ -155,18 +155,18 @@ body{
 
 .dignity{
     background-color: #f5f5f5;
-    padding: 50px;  /* внутренний отступ */
+    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
     box-sizing: border-box;  /*width(height) = content+padding+border */
     width: 100%;    /* Ширина элемента 100% от ширины родителя */
 }
 
-.dignity-h{
+.dignity-title{
     display: block;     /* Отображать элемент как блочный */
     color: #445161;   /* Цвет текста */
     font-size: 30px;    /* Размер шрифта */
     font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
     text-align: center; /* Выравнивание текста по горизонтали по центру */
-    margin: 0 0 0 0; /* Внешние отступы 12,3,6,9 */
+    margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
 }
 
 /* 1200 - (50*2) = 1100.  1100/2 = 550.  550 = (50 + 500) */
@@ -174,7 +174,7 @@ body{
 .dignity-column-b{
     display: inline-block;
     width: 500px;          /* Ширина контента */
-    margin: 2rem 0 0 40px; /* Внешние отступы 12,3,6,9 */
+    margin: 0 0 40px 40px; /* Внешние отступы 12,3,6,9 */
 }
 
 .dignity-p{
@@ -201,7 +201,7 @@ body{
     top: 0px;    /* Отступ сверху */
     left: -35px; /* Отступ слева, плюсик заезжает в поле margin */
 
-    background-image: url("../img/png_white_plus_32x32.png");
+    background-image: url("../img/white_plus_32x32.png");
 
     /* Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.*/
     -webkit-background-size: contain; /* Safari до версии 4.1 и Chrome до версии 3.0 */
@@ -223,5 +223,129 @@ body{
 .dignity-column-b{
     background-color: lightblue;
 } */
+
+
+/*====================================================================*/
+/*                                                      Dignity2 flex */
+/*====================================================================*/
+
+.dignity2{
+    background-color: #f5f5f5;
+    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    width: 100%;    /* Ширина элемента 100% от ширины родителя */
+
+    display: flex;
+    flex-direction: row; /* Гланая ось по горизонтали */
+    flex-wrap: wrap; /* Разрешить перенос элементов на новую строку */
+    justify-content: space-between; /* Элементы отображаются с одинаковыми отступами между ними */
+}
+
+.dignity2-title{
+    display: block;     /* Отображать элемент как блочный */
+    width: 100%;        /* Ширина 100% от ширины родителя (для flex)*/
+
+    color: #445161;   /* Цвет текста */
+    font-size: 30px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    text-align: center; /* Выравнивание текста по горизонтали по центру */
+    margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
+}
+
+/* 1200 - (50*2) = 1100.  1100/2 = 550.  550 = (50 + 500) */
+.dignity2-column-a,
+.dignity2-column-b{
+    width: 500px;          /* Ширина контента */
+    margin: 0 0 40px 40px; /* Внешние отступы 12,3,6,9 */
+}
+
+
+/* Элементы details имеют внешний отступ снизу, кроме последнего элемента,
+   так как ниже последнего элемента будет margin контэйнера .dignity2-column-a/b */
+.dignity2-details{
+    margin-bottom: 1rem; /* Внеший отступ снизу */
+    position: relative;  /* Внутри буду декоративные элементы с position:absolute */
+}
+.dignity2-details:last-child{ /* Убираем внешний отступ у последнего элемента */
+    margin-bottom: 0rem; /* Внеший отступ снизу */
+}
+
+.dignity2-details-summary{
+    display: block;     /* Отображать элемент как блочный */
+    color: #333333;   /* Цвет текста */
+    font-size: 16px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    line-height: 24px;  /* Высота строки, не путать с размером шрифта */
+}
+
+/* Убираем подсветку outline, которая по умолчанию отображается при нажатии на элемент */
+.dignity2-details-summary:focus{
+    outline: none;
+}
+
+.dignity2-details-summary::-webkit-details-marker{ /* Здесь две точки обязательны */
+    display: none; /* Не отображать маркер по умолчанию(стрелка) */
+}
+
+/* Добавляем картинку с плюсом для закрытого состояния */
+.dignity2-details-summary:before{
+    content: "";
+    display: block; /* Отображать элемент как блок */
+    width: 32px;    /* Ширина контента */
+    height: 32px;   /* Высота контента */
+    background-color: #445161;
+    position: absolute; /* Позицианируем декоративный элемент относительно родителя с position:relative; */
+    top: 0px;    /* Отступ сверху */
+    left: -35px; /* Отступ слева, плюсик заезжает в поле margin */
+
+    background-image: url("../img/white_plus_32x32.png");
+
+    /* Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.*/
+    -webkit-background-size: contain; /* Safari до версии 4.1 и Chrome до версии 3.0 */
+    -o-background-size: contain;      /* Opera до версии 10.53 */
+    -moz-background-size: contain;    /* Firefox до версии 4.0 */
+    background-size: contain;
+    
+    background-repeat: no-repeat; /* Отображать фоновую картинку один раз без повторов */
+    background-position: center;  /* Расположить фоновую картинку по центу */
+}
+
+/* Добавляем картинку с минусом для открытого состояния */
+.dignity2-details[open] > summary:before{
+    content: "";
+    display: block; /* Отображать элемент как блок */
+    width: 32px;    /* Ширина контента */
+    height: 32px;   /* Высота контента */
+    background-color: #445161;
+    position: absolute; /* Позицианируем декоративный элемент относительно родителя с position:relative; */
+    top: 0px;    /* Отступ сверху */
+    left: -35px; /* Отступ слева, плюсик заезжает в поле margin */
+
+    background-image: url("../img/white_minus_32x32.png");
+
+    /* Масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком поместилась внутрь блока.*/
+    -webkit-background-size: contain; /* Safari до версии 4.1 и Chrome до версии 3.0 */
+    -o-background-size: contain;      /* Opera до версии 10.53 */
+    -moz-background-size: contain;    /* Firefox до версии 4.0 */
+    background-size: contain;
+    
+    background-repeat: no-repeat; /* Отображать фоновую картинку один раз без повторов */
+    background-position: center;  /* Расположить фоновую картинку по центу */
+}
+
+/* Фоновые цвета для отладки */
+.dignity2{
+    background-color: coral;
+}
+.dignity2-title{
+    background-color: orange;
+}
+.dignity2-column-a{
+    background-color: lightgreen;
+}
+.dignity2-column-b{
+    background-color: lightblue;
+}
+
 
 
