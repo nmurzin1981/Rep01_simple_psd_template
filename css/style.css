@@ -375,7 +375,7 @@ body{
 }
 
 .screen-item{  /* Это тэг <figure> */
-    width: 49%;           /* Ширина 50% от ширины родителя */
+    width: 49%;       /* Ширина 50% от ширины родителя */
     margin: 0 0 40px 0px; /* Внешние отступы 12,3,6,9 */
     display: flex; /* Это flex контэйнер в котором есть дочерние блоки -img и -txtbox */
 }
@@ -447,7 +447,7 @@ body{
 }
 
 .reviews-item{
-    width: 49%;           /* Ширина 50% от ширины родителя */
+    width: 49%;       /* Ширина 50% от ширины родителя */
     margin: 0 0 40px 0px; /* Внешние отступы 12,3,6,9 */
     display: flex; /* Это flex контэйнер в котором есть дочерние блоки -img и -txtbox */
 }
@@ -511,4 +511,54 @@ body{
     background-color: navajowhite;
 } */
 
+/*====================================================================*/
+/*                                                  By it now (price) */
+/*====================================================================*/
+
+.price{
+    background-color: white;
+    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    width: 100%;     /* Ширина элемента 100% от ширины родителя */
+
+    display: flex;
+    flex-direction: row; /* Гланая ось по горизонтали */
+    flex-wrap: wrap; /* Разрешить перенос элементов на новую строку */
+    justify-content: center; /*ПО ГОРИЗОНТАЛИ: элементы выравниваются по центру контэйнера */
+    align-items: flex-end; /*ПО ВЕРТИКАЛИ: Элементы выравниваются по нижнему краю контейнера */
+}
+
+.price-title{
+    display: block;     /* Отображать элемент как блочный */
+    min-width: 100%;    /* Ширина 100% от ширины родителя (для flex)*/
+
+    color: #445161;   /* Цвет текста */
+    font-size: 30px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    text-align: center; /* Выравнивание текста по горизонтали по центру */
+    margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
+}
+
+.price-item{
+    width: 29%;       /* Ширина 30% от ширины родителя */
+    margin: 0 30px 40px 0px; /* Внешние отступы 12,3,6,9 */
+}
+.price-item:last-child{  /* Последний ценник */
+    margin-right: 0;     /* Внешний отступ справа */
+}
+
+
+
+
+
+/* Фоновые цвета для отладки */
+.price{
+    background-color: coral;
+}
+.price-title{
+    background-color: orange;
+}
+.price-item{ 
+    background-color: lightgreen;
+}
 
