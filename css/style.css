@@ -374,8 +374,8 @@ body{
     margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
 }
 
-.screen-item{
-    width: 49%;         /* Ширина 50% от ширины родителя */
+.screen-item{  /* Это тэг <figure> */
+    width: 49%;           /* Ширина 50% от ширины родителя */
     margin: 0 0 40px 0px; /* Внешние отступы 12,3,6,9 */
     display: flex; /* Это flex контэйнер в котором есть дочерние блоки -img и -txtbox */
 }
@@ -446,7 +446,7 @@ body{
     margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
 }
 
-.reviews-item{            /* Это тэг <figure> */
+.reviews-item{
     width: 49%;           /* Ширина 50% от ширины родителя */
     margin: 0 0 40px 0px; /* Внешние отступы 12,3,6,9 */
     display: flex; /* Это flex контэйнер в котором есть дочерние блоки -img и -txtbox */
@@ -461,7 +461,7 @@ body{
     border-radius: 50%; /* Скругление краев */
 }
 
-.reviews-item-txtbox{       /* Это тэг <figcaption> */
+.reviews-item-txtbox{
     padding: 10px 10px 10px 10px; /* Внутренние отступы 12,3,6,9 */
     background-color: #ebebeb;
     margin-left: 20px;  /* Внешний отступ слева для треугольника */
