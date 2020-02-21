@@ -542,23 +542,79 @@ body{
 .price-item{
     width: 29%;       /* Ширина 30% от ширины родителя */
     margin: 0 30px 40px 0px; /* Внешние отступы 12,3,6,9 */
+    background-color: #445162;
+    border-radius: 10px;
 }
 .price-item:last-child{  /* Последний ценник */
     margin-right: 0;     /* Внешний отступ справа */
 }
 
 
+.price-item-name{
+    display: block;     /* Отображать элемент как блочный */
+    color: #ffffff;   /* Цвет текста */
+    font-size: 24px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    text-align: center; /* Выравнивание текста по горизонтали по центру */
+    padding: 18px 0 18px 0;   /* Внутренние отступы 12,3,6,9 */
+}
+
+.price-item-value{
+    display: block; /* Отображать элемент как блочный */
+    background-color: white;
+    color: #445162;        /* Цвет текста */
+    font-size: 40px;         /* Размер шрифта */
+    font-weight: 400;        /* Насыщенность(жирность) шрифта 100-900 */
+    margin: 0 5px 0 5px;     /* Внешние отступы 12,3,6,9 */
+    text-align: center;      /* Выравнивание текста по горизонтали по центру */
+    padding: 17px 0 17px 0;  /* Внутренние отступы 12,3,6,9 */
+}
 
 
+.price-item-ol{
+    color: #ffffff;   /* Цвет текста */
+    font-size: 14px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    line-height: 24px;  /* Высота строки, не путать с высотой шрифта */
+    list-style-position: inside;  /* Строки с номером расширяются внутрь */
+    padding: 0 0 0 0;             /* Внутренние отступы 12,3,6,9. По умолчанию был padding-left=40px */
+    margin: 20px 20px 20px 20px;  /* Внешние отступы 12,3,6,9 */
+}
+
+.price-item-button-wrap{
+    margin: 0 20px 20px 20px;    /* Внешние отступы 12,3,6,9 */
+}
+
+.price-item-button{
+    width: 100%;
+    background-color: white;
+    color: #445161;   /* Цвет текста */
+    font-size: 18px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    text-transform: uppercase;   /* Текст заглавными буквами */
+    padding: 14px 0 14px 0;      /* Внутренние отступы 12,3,6,9. */
+    border: none;
+    border-radius: 10px;
+}
+
+.price-item-button:hover{ /* Наведение на кнопку */
+    background-color: lightgray;
+}
+.price-item-button:active{ /* Нажатие на кнопку */
+    outline: none;
+    transform: translateY(1px);
+    color: black;
+}
+.price-item-button:focus{ /* После того как отпустили кнопку */
+    outline: none;
+}
 
 /* Фоновые цвета для отладки */
-.price{
+/* .price{
     background-color: coral;
 }
 .price-title{
     background-color: orange;
-}
-.price-item{ 
-    background-color: lightgreen;
-}
+} */
+
 
