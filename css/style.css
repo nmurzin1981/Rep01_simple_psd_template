@@ -617,4 +617,183 @@ body{
     background-color: orange;
 } */
 
+/*====================================================================*/
+/*                                                           Contacts */
+/*====================================================================*/
+
+.contacts{
+    background-color: #445162;
+    padding: 50px;  /* внутренний отступ */
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    width: 100%;     /* Ширина элемента 100% от ширины родителя */
+
+    display: flex;
+    flex-direction: row; /* Гланая ось по горизонтали */
+    flex-wrap: wrap;  /* Разрешить перенос элементов на новую строку */
+    justify-content: center; /*ПО ГОРИЗОНТАЛИ: элементы выравниваются по центру контэйнера */
+}
+
+.contacts-title{
+    display: block;     /* Отображать элемент как блочный */
+    min-width: 100%;    /* Ширина 100% от ширины родителя (для flex)*/
+
+    color: white;     /* Цвет текста */
+    font-size: 30px;    /* Размер шрифта */
+    font-weight: 400;   /* Насыщенность(жирность) шрифта 100-900 */
+    text-align: center; /* Выравнивание текста по горизонтали по центру */
+    margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
+}
+
+.contacts-column-a{
+    min-width: 60%;
+    /* min-height: 400px; */
+    text-align: right; /* Чтобы дочерний элемент contacts-form прижался вправо */
+}
+.contacts-column-b{
+    min-width: 40%;
+    /* min-height: 400px; */
+}
+
+/*====================================================================*/
+/*                                                  contacts-column-a */
+/*====================================================================*/
+
+.contacts-form{
+    display: inline-block; /* Чтобы родитель(contacts-column-a) мог приментиь text-align: right; */
+    width: 500px; /* Это ширина дочерних текстовых полей */
+    text-align: center; /* Чтобы дочерняя кнопка submit встала по cередине */
+    margin-right: 20px;
+}
+
+.contacts-input-name,
+.contacts-input-email{
+    display: block;
+    width: 100%; /* Ширина 100% от родителя contacts-form */
+    height: 40px;
+    background-color: white;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contacts-textarea{
+    display: block;
+    width: 100%; /* Ширина 100% от родителя contacts-form */
+    height: 170px;
+    background-color: white;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* Высота строки, имеет смысл только для многострочного текста */
+    resize: none;      /* Запрет на изменение размера мышкой */
+
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    padding: 10px;    
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contacts-btn-submit{
+    display: inline-block; /* Чтобы родитель(contacts-form) мог приментиь text-align: center; */
+    width: 140px;
+    height: 40px;
+    background-color: white;
+    color: #445162;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+}
+
+.contacts-btn-submit:hover{ /* Наведение на кнопку */
+    background-color: lightgray;
+}
+.contacts-btn-submit:active{ /* Нажатие на кнопку */
+    outline: none;
+    background-color: white;
+    color: black;
+}
+.contacts-btn-submit:focus{ /* После того как отпустили кнопку */
+    outline: none;
+}
+
+/*====================================================================*/
+/*                                                  contacts-column-b */
+/*====================================================================*/
+
+.contacts-b-skype,
+.contacts-b-icq,
+.contacts-b-email,
+.contacts-b-phone{
+    display : block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 15px 20px;
+}
+
+.contacts-column-b>span:first-child{
+    margin-top: 15px;
+}
+
+.contacts-b-skype:before{
+    font-family: "font_icons";
+    content: "\e803\0020";
+    font-size: 20px;
+}
+
+.contacts-b-icq:before{
+    font-family: "font_icons";
+    content: "\f304\0020";
+    font-size: 20px;;
+}
+
+.contacts-b-email:before{
+    content: "\0040\0020";
+    font-size: 20px;
+}
+
+.contacts-b-phone:before{
+    font-family: "font_icons";
+    content: "\e802\0020";
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+.icon-google:before { content: '\e804'; }
+.icon-facebook:before { content: '\f09a'; } 
+.icon-at:before { content: '\f1fa'; } 
+.icon-twitter:before { content: '\f309'; } 
+.icon-linkedin:before { content: '\f31a'; } 
+
+
+
+/* Фоновые цвета для отладки */
+.contacts-title{
+    background-color: orange;
+}
+.contacts-column-a{
+    background-color: lightgreen;
+}
+.contacts-column-b{
+    background-color: red;
+}
+.contacts-form{
+    border: 1px solid black;
+}
 
