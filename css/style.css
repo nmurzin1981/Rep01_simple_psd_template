@@ -652,7 +652,7 @@ body{
 .contacts-column-b{
     min-width: 40%;
     /* min-height: 400px; */
-}
+ }
 
 /*====================================================================*/
 /*                                                  contacts-column-a */
@@ -662,7 +662,6 @@ body{
     display: inline-block; /* Чтобы родитель(contacts-column-a) мог приментиь text-align: right; */
     width: 500px; /* Это ширина дочерних текстовых полей */
     text-align: center; /* Чтобы дочерняя кнопка submit встала по cередине */
-    margin-right: 20px;
 }
 
 .contacts-input-name,
@@ -740,10 +739,6 @@ body{
     margin: 0 0 15px 20px;
 }
 
-.contacts-column-b>span:first-child{
-    margin-top: 15px;
-}
-
 .contacts-b-skype:before{
     font-family: "font_icons";
     content: "\e803\0020";
@@ -767,24 +762,103 @@ body{
     font-size: 20px;
 }
 
+.contacts-b-twitter{
+    margin-top: 15px;
+}
+.contacts-b-phone{
+    margin-bottom: 50px;
+}
+
+.contacts-b-social-bar{
+    margin: 0 0 0 20px;
+    display: flex;
+    flex-direction: row; /* Гланая ось по горизонтали */
+    justify-content: flex-start; /*ПО ГОРИЗОНТАЛИ: по левой стороне контейнера. */
+}
+
+.contacts-b-social-bar>a{
+    border: 1px solid black;
+    min-width: 40px;
+    height: 40px;    
+    text-decoration: none;
+    text-align: center;
+    color:#445162;
+    margin-right: 10px;
+}
+.contacts-b-youtube{
+    margin-right: 0px;
+}
 
 
+.contacts-b-twitter:before{
+    background-color: white;
+    font-family: "font_icons";
+    content: '\f309';
+    font-size: 30px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    padding-top: 7px;
+    border-radius: 50%;
+}
 
+.contacts-b-facebook:before{
+    background-color: white;
+    font-family: "font_icons";
+    content: '\f09a';
+    font-size: 30px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    padding-top: 7px;
+    border-radius: 50%;
+}
 
+.contacts-b-in:before{
+    background-color: white;
+    font-family: "font_icons";
+    content: '\f31a';
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    padding-top: 10px;
+    border-radius: 50%;
+}
 
+.contacts-b-google:before{
+    background-color: white;
+    font-family: "font_icons";
+    content: '\e804';
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    padding-top: 12px;
+    border-radius: 50%;
+}
 
-
-
-.icon-google:before { content: '\e804'; }
-.icon-facebook:before { content: '\f09a'; } 
-.icon-at:before { content: '\f1fa'; } 
-.icon-twitter:before { content: '\f309'; } 
-.icon-linkedin:before { content: '\f31a'; } 
+.contacts-b-youtube:before{
+    background-color: white;
+    white-space: pre;
+    content: 'You\0aTube';
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;  /*width(height) = content+padding+border */
+    padding-top: 7px;
+    border-radius: 50%;
+}
 
 
 
 /* Фоновые цвета для отладки */
-.contacts-title{
+/* .contacts-title{
     background-color: orange;
 }
 .contacts-column-a{
@@ -795,5 +869,5 @@ body{
 }
 .contacts-form{
     border: 1px solid black;
-}
+} */
 
