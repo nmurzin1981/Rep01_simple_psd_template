@@ -155,7 +155,7 @@ body{
 
 .dignity{
     background-color: #f5f5f5;
-    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    padding: 50px;  /* внутренний отступ */
     box-sizing: border-box;  /*width(height) = content+padding+border */
     width: 100%;    /* Ширина элемента 100% от ширины родителя */
 }
@@ -174,7 +174,7 @@ body{
 .dignity-column-b{
     display: inline-block;
     width: 500px;          /* Ширина контента */
-    margin: 0 0 40px 40px; /* Внешние отступы 12,3,6,9 */
+    margin: 0 0 0 40px; /* Внешние отступы 12,3,6,9 */
 }
 
 .dignity-p{
@@ -231,7 +231,7 @@ body{
 
 .dignity2{
     background-color: #f5f5f5;
-    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    padding: 50px;  /* внутренний отступ */
     box-sizing: border-box;  /*width(height) = content+padding+border */
     width: 100%;    /* Ширина элемента 100% от ширины родителя */
 
@@ -256,7 +256,7 @@ body{
 .dignity2-column-a,
 .dignity2-column-b{
     width: 500px;          /* Ширина контента */
-    margin: 0 0 40px 40px; /* Внешние отступы 12,3,6,9 */
+    margin: 0 0 0 40px; /* Внешние отступы 12,3,6,9 */
 }
 
 
@@ -353,7 +353,7 @@ body{
 
 .screens{
     background-color: white;
-    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    padding: 50px;  /* внутренний отступ */
     box-sizing: border-box;  /*width(height) = content+padding+border */
     width: 100%;    /* Ширина элемента 100% от ширины родителя */
 
@@ -425,7 +425,7 @@ body{
 
 .reviews{
     background-color: #f5f5f5;
-    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    padding: 50px;  /* внутренний отступ */
     box-sizing: border-box;  /*width(height) = content+padding+border */
     width: 100%;    /* Ширина элемента 100% от ширины родителя */
 
@@ -450,6 +450,10 @@ body{
     width: 49%;       /* Ширина 50% от ширины родителя */
     margin: 0 0 40px 0px; /* Внешние отступы 12,3,6,9 */
     display: flex; /* Это flex контэйнер в котором есть дочерние блоки -img и -txtbox */
+}
+.reviews-item:nth-child(4),
+.reviews-item:nth-child(5) {
+        margin: 0;
 }
 
 .reviews-item-img{
@@ -517,7 +521,7 @@ body{
 
 .price{
     background-color: white;
-    padding: 50px 50px 10px 50px;  /* внутренний отступ 12,3,6,9 */
+    padding: 50px;  /* внутренний отступ */
     box-sizing: border-box;  /*width(height) = content+padding+border */
     width: 100%;     /* Ширина элемента 100% от ширины родителя */
 
@@ -540,8 +544,8 @@ body{
 }
 
 .price-item{
-    width: 29%;       /* Ширина 30% от ширины родителя */
-    margin: 0 30px 40px 0px; /* Внешние отступы 12,3,6,9 */
+    width: 29%;         /* Ширина 30% от ширины родителя */
+    margin: 0 30px 0 0; /* Внешние отступы 12,3,6,9 */
     background-color: #445162;
     border-radius: 10px;
 }
@@ -581,8 +585,10 @@ body{
     margin: 20px 20px 20px 20px;  /* Внешние отступы 12,3,6,9 */
 }
 
-.price-item-button-wrap{
-    margin: 0 20px 20px 20px;    /* Внешние отступы 12,3,6,9 */
+/* Без этой обертки не удается сделать корректные размеры кнопки */
+/* Почему? не знаю. */
+.price-item-button-wrap{    
+    margin: 0 20px 20px 20px;
 }
 
 .price-item-button{
@@ -644,19 +650,15 @@ body{
     margin: 0 0 2rem 0; /* Внешние отступы 12,3,6,9 */
 }
 
-.contacts-column-a{
+.contacts-side1{
     min-width: 60%;
-    /* min-height: 400px; */
     text-align: right; /* Чтобы дочерний элемент contacts-form прижался вправо */
 }
-.contacts-column-b{
+.contacts-side2{
     min-width: 40%;
-    /* min-height: 400px; */
  }
 
-/*====================================================================*/
-/*                                                  contacts-column-a */
-/*====================================================================*/
+/*=================== side1 ====================*/
 
 .contacts-form{
     display: inline-block; /* Чтобы родитель(contacts-column-a) мог приментиь text-align: right; */
@@ -724,60 +726,57 @@ body{
     outline: none;
 }
 
-/*====================================================================*/
-/*                                                  contacts-column-b */
-/*====================================================================*/
+/*=================== side2 ====================*/
 
-.contacts-b-skype,
-.contacts-b-icq,
-.contacts-b-email,
-.contacts-b-phone{
+.contacts-side2-bar1{
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.contacts-side2-bar1-item{
     display : block;
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-    margin: 0 0 15px 20px;
+    margin: 0 0 20px 0;
+}
+.contacts-side2-bar1-item:last-child{
+    margin-bottom: 0px;
 }
 
-.contacts-b-skype:before{
+.contacts-side2-bar1-skype:before{
     font-family: "font_icons";
     content: "\e803\0020";
     font-size: 20px;
 }
 
-.contacts-b-icq:before{
+.contacts-side2-bar1-icq:before{
     font-family: "font_icons";
     content: "\f304\0020";
     font-size: 20px;;
 }
 
-.contacts-b-email:before{
+.contacts-side2-bar1-email:before{
     content: "\0040\0020";
     font-size: 20px;
 }
 
-.contacts-b-phone:before{
+.contacts-side2-bar1-phone:before{
     font-family: "font_icons";
     content: "\e802\0020";
     font-size: 20px;
 }
 
-.contacts-b-twitter{
-    margin-top: 15px;
-}
-.contacts-b-phone{
-    margin-bottom: 50px;
-}
 
-.contacts-b-social-bar{
+.contacts-social-bar{
     margin: 0 0 0 20px;
     display: flex;
     flex-direction: row; /* Гланая ось по горизонтали */
     justify-content: flex-start; /*ПО ГОРИЗОНТАЛИ: по левой стороне контейнера. */
 }
 
-.contacts-b-social-bar>a{
-    border: 1px solid black;
+.contacts-social-item{
+    border: 2px solid #445162; /* Рамка не видимая */
     min-width: 40px;
     height: 40px;    
     text-decoration: none;
@@ -785,12 +784,16 @@ body{
     color:#445162;
     margin-right: 10px;
 }
-.contacts-b-youtube{
+.contacts-social-item:last-child{
     margin-right: 0px;
+}
+.contacts-social-item:hover{
+    border-radius: 50%;
+    border: 2px solid gold;
 }
 
 
-.contacts-b-twitter:before{
+.contacts-social-bar-twitter:before{
     background-color: white;
     font-family: "font_icons";
     content: '\f309';
@@ -803,7 +806,7 @@ body{
     border-radius: 50%;
 }
 
-.contacts-b-facebook:before{
+.contacts-social-bar-facebook:before{
     background-color: white;
     font-family: "font_icons";
     content: '\f09a';
@@ -816,7 +819,7 @@ body{
     border-radius: 50%;
 }
 
-.contacts-b-in:before{
+.contacts-social-bar-in:before{
     background-color: white;
     font-family: "font_icons";
     content: '\f31a';
@@ -829,7 +832,7 @@ body{
     border-radius: 50%;
 }
 
-.contacts-b-google:before{
+.contacts-social-bar-google:before{
     background-color: white;
     font-family: "font_icons";
     content: '\e804';
@@ -842,7 +845,7 @@ body{
     border-radius: 50%;
 }
 
-.contacts-b-youtube:before{
+.contacts-social-bar-youtube:before{
     background-color: white;
     white-space: pre;
     content: 'You\0aTube';
@@ -855,19 +858,22 @@ body{
     border-radius: 50%;
 }
 
+/*====================================================================*/
+/*                                                          Copyright */
+/*====================================================================*/
 
+.copyright{
+    background-color: white;
+    color: #445162;
+    padding: 5px 0 5px 40%;
+}
 
-/* Фоновые цвета для отладки */
-/* .contacts-title{
-    background-color: orange;
+.copyright>a{
+    text-decoration: none;
+    color: #445162;
+    text-transform: uppercase;
 }
-.contacts-column-a{
-    background-color: lightgreen;
+.copyright>a:hover{
+    text-decoration: underline;
 }
-.contacts-column-b{
-    background-color: red;
-}
-.contacts-form{
-    border: 1px solid black;
-} */
 
