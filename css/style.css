@@ -380,6 +380,11 @@ body{
     display: flex; /* Это flex контэйнер в котором есть дочерние блоки -img и -txtbox */
 }
 
+.screen-item:nth-child(4),
+.screen-item:nth-child(5){
+    margin-bottom: 0;
+}
+
 .screen-item-img{
     display: block;      /* Отображать элемент как блочный */
     margin: 0 10px 0 0px;   /* Внешние отступы 12,3,6,9 */
@@ -699,6 +704,12 @@ body{
     border: none;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.contacts-input-name:focus,
+.contacts-input-email:focus,
+.contacts-textarea:focus{
+    outline: none;
 }
 
 .contacts-btn-submit{
